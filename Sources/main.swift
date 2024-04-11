@@ -8,7 +8,7 @@ import OpenAPIVapor
 
 
 // Define a type that conforms to the generated protocol.
-struct GreetingServiceAPIImpl: APIProtocol {
+struct OASISServiceAPIImpl: APIProtocol {
     
     func getGreeting(
         _ input: Operations.getGreeting.Input
@@ -78,7 +78,7 @@ let transport = VaporTransport(routesBuilder: app)
 
 // Create an instance of handler type that conforms the generated protocol
 // defininig the service API.
-let handler = GreetingServiceAPIImpl()
+let handler = OASISServiceAPIImpl()
 
 
 // Call the generated function on the implementation to add its request
