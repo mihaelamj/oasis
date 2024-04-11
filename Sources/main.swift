@@ -28,20 +28,18 @@ struct GreetingServiceAPIImpl: APIProtocol {
 }
 
 
-// Create your Vapor application.
+// Create Vapor application.
 let app = Vapor.Application()
 
-
-// Create a VaporTransport using your application.
+// Create a VaporTransport using that application.
 let transport = VaporTransport(routesBuilder: app)
 
-
-// Create an instance of your handler type that conforms the generated protocol
-// defininig your service API.
+// Create an instance of handler type that conforms the generated protocol
+// defininig the service API.
 let handler = GreetingServiceAPIImpl()
 
 
-// Call the generated function on your implementation to add its request
+// Call the generated function on the implementation to add its request
 // handlers to the app.
 try handler.registerHandlers(on: transport, serverURL: Servers.server1())
 
