@@ -33,6 +33,37 @@ paths:
             text/plain:
               schema:
                 type: string
+  /greetings:
+    get:
+      operationId: getGreetings
+      parameters:
+        - name: name
+          required: false
+          in: query
+          description: The name used in the returned greeting.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A success response with an array of greetings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Greeting'
+  /emojis:
+    get:
+      operationId: getEmojis
+      responses:
+        '200':
+          description: A success response with an array of emojis.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
 components:
   schemas:
     Greeting:
@@ -44,3 +75,4 @@ components:
           description: The string representation of the greeting.
       required:
         - message
+

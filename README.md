@@ -26,3 +26,18 @@ curl http://localhost:8080/api/emoji
 curl http://127.0.0.1:8080/api/emoji
 "👋"
 ```
+
+Emojis
+
+```bash
+curl http://127.0.0.1:8080/api/emoji
+
+curl http://127.0.0.1:8080/api/emojis
+```
+
+
+```bash
+curl http://127.0.0.1:8080/api/greet\?name\=Mihaela
+
+curl http://127.0.0.1:8080/api/greetings\?name\=Mihaela
+```
