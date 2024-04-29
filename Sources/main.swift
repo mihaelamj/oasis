@@ -64,7 +64,6 @@ struct OASISServiceAPIImpl: APIProtocol {
         }
         
         // Return the array of emojis
-//        return .ok(.init(body: .plainText(emojisArray.joined())))
         return .ok(.init(body: .json(emojisArray)))
     }
 }
